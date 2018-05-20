@@ -1,0 +1,110 @@
+/**app.wxss**/
+html,
+body,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 12px;
+  font-family: 'ProximaNovaRegItalic';
+}
+::selection {
+  text-shadow: none;
+  background-color: rgba(39,85,178,0.42);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  zoom: 1;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-right {
+  text-align: right;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.center-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.fl {
+  float: left;
+}
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+  content: ' ';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.invisible {
+  visibility: hidden;
+}
+.overlay {
+  height: 100%;
+  background-color: rgba(0,0,0,0.55);
+  opacity: 1;
+  visibility: hidden;
+  transition: all 0.2s linear;
+  z-index: 2;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.one-omission {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.bold{
+  font-weight:bold;
+}

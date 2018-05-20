@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title-box">
+    <view wx:for="{{catagoryList}}" class="catagory {{catagory.key === activeCategory ? 'active' : ''}}" wx:for-item="catagory" wx:key="catagory.key" bindtap='onChangeCategory' data-category='{{catagory.key}}'>{{catagory.display}}</view>
+  </view>
+  <view class="news-top">
+   <navigator url="/pages/details/details?id={{newsList[0].id}}">
+     <image src='{{newsList[0].firstImage==""?defaultImg:newsList[0].firstImage}}' mode='aspectFill' />
+     <view class="top-content">
+      <view class="title">{{newsList[0].title}}</view>
+      <view class="top-content-bottom">
+        <text class="source">{{newsList[0].source}}</text>
+        <text class="date">{{newsList[0].date}}</text>
+      </view>
+     </view>
+    </navigator>
+  </view>
+  <view class="news-list">
+    <view class="list-item clearfix" wx:for="{{newsList}}" wx:for-item="newsItem" wx:key="newsItem.id">
+    <navigator url="/pages/details/details?id={{newsItem.id}}">
+      <view class="item-left fl">
+        <view class="title">{{newsItem.title}}</view>
+        <view>
+          <text class="source">{{newsItem.source}}</text>
+          <text class="date">{{newsItem.date}}</text>
+        </view>
+      </view>
+      <view class="item-right fr">
+        <navigator url="{{newsItem.id}}">
+          <image mode='aspectFill' src='{{newsItem.firstImage==""?defaultImg:newsItem.firstImage}}' ></image> 
+        </navigator>
+      </view>
+    </navigator>
+    </view>
+  </view>
+</view>

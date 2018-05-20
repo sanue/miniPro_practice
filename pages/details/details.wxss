@@ -1,0 +1,24 @@
+.news-container {
+  margin:30rpx;
+}
+.news-container .news-top .title{
+  font-size: 52rpx;
+  margin:16rpx 0;
+  color:#333;
+}
+.news-container .news-top .info{
+  color: #666;
+  margin:16rpx 0
+}
+.news-container .news-article{
+  line-height: 1.5;
+  color: #666;
+  font-size:36rpx
+}
+.news-container .article-p {
+  margin:30rpx 0
+}
+.news-container .news-article image {
+  width: 690rpx;
+  height: 500rpx;
+}

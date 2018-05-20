@@ -1,0 +1,17 @@
+<view class="news-container">
+  <view class="news-top">
+    <view class="title">{{news.title}}</view>
+    <view class="info clearfix">
+      <text class="source fl">{{news.source}}</text>
+      <text class="time fl">{{news.date}}</text>
+      <text class="fr">阅读：{{news.readCount}}</text>
+    </view>
+  </view>
+  <view class="news-article">
+    <view wx:for="{{news.content}}" wx:for-item="item" wx:key="item.id" class="article-p">
+      <view wx:if="{{item.type==='p'}}">{{item.text}}</view>
+      <view wx:elif="{{item.type==='strong'}}" class="bold">{{item.text}}</view>
+      <image wx:elif="{{item.type==='image'}}"  mode='aspectFill' src='{{item.src==""?defaultImg:item.src}}' mode="aspectFill" ></image>
+    </view>
+  </view>
+</view>
