@@ -10,6 +10,9 @@
   color: #666;
   margin:16rpx 0
 }
+.news-container .news-top .info text {
+  margin-right:6rpx
+}
 .news-container .news-article{
   line-height: 1.5;
   color: #666;

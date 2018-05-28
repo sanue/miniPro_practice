@@ -24,6 +24,10 @@ Page({
   onPullDownRefresh() {
     this.loadNews(this.data.id,() => {
       wx.stopPullDownRefresh()
+      wx.showToast({
+        title: '更新成功',
+        duration: 1000
+      })
     })
   },
   loadNews(id, callback) {
@@ -39,7 +43,7 @@ Page({
             }
           })
           wx.showToast({
-            title: '更新成功',
+            title: '加载完成',
             duration: 1000
           })
         } else {

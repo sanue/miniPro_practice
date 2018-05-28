@@ -15,6 +15,9 @@
 .news-top .top-content .top-content-bottom {
   font-size: 30rpx;
 }
+.news-top .top-content .top-content-bottom text {
+  margin-right:6rpx
+}
 .title-box{
   display: flex;
   font-size: 34rpx;

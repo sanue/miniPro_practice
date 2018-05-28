@@ -9,7 +9,7 @@
      <view class="top-content">
       <view class="title">{{newsList[0].title}}</view>
       <view class="top-content-bottom">
-        <text class="source">{{newsList[0].source}}</text>
+        <text class="source">{{newsList[0].source === ''?'无作者':''}}</text>
         <text class="date">{{newsList[0].date}}</text>
       </view>
      </view>
@@ -21,7 +21,7 @@
       <view class="item-left fl">
         <view class="title">{{newsItem.title}}</view>
         <view>
-          <text class="source">{{newsItem.source}}</text>
+          <text class="source">{{newsItem.source === ''?'无作者':''}}</text>
           <text class="date">{{newsItem.date}}</text>
         </view>
       </view>

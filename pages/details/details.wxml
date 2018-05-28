@@ -2,7 +2,7 @@
   <view class="news-top">
     <view class="title">{{news.title}}</view>
     <view class="info clearfix">
-      <text class="source fl">{{news.source}}</text>
+      <text class="source fl">{{news.source === ''?'无作者':''}}</text>
       <text class="time fl">{{news.date}}</text>
       <text class="fr">阅读：{{news.readCount}}</text>
     </view>

@@ -10,7 +10,7 @@ Page({
         display: '国内'
       },
       {
-        key: 'gg',
+        key: 'gj',
         display: '国际'
       },
       {
@@ -49,6 +49,10 @@ Page({
   onPullDownRefresh() {
     this.loadData(() => {
       wx.stopPullDownRefresh()
+      wx.showToast({
+        title: '更新成功',
+        duration: 1000
+      })
     })
   },
   loadData(callback) {
@@ -69,12 +73,12 @@ Page({
               date: news.date.split("T")[0] + ' ' + news.date.split("T")[1].replace(".000Z", "").substring(0, 5)
             })
           })
-          wx.showToast({
-            title: '更新成功',
-            duration: 1000
-          })
           this.setData({
             newsList
+          })
+          wx.showToast({
+            title: '加载完成',
+            duration: 1000
           })
         } else {
           wx.showToast({
